@@ -1,0 +1,120 @@
+﻿<Window x:Class="mc_mods_sorter.addMod"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mc_mods_sorter"
+        mc:Ignorable="d"
+        Background="#222"
+        MinHeight="300"
+        MinWidth="500"
+        Title="mc mods sorter" Height="300" Width="500">
+    <Window.Resources>
+        <Style TargetType="ScrollBar">
+            <Setter Property="Background" Value="White"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid
+        Margin="10">
+        <!-- mod name -->
+        <TextBlock
+            Foreground="#fff"
+            FontSize="15">
+            Mod name:
+            <InlineUIContainer
+                BaselineAlignment="Center">
+                <TextBox Name="modNameInput"
+                    Width="100"
+                    Foreground="#fff"
+                    Background="#333"
+                    BorderThickness="0"
+                    Margin="18.5,0,0,0">
+                    
+                </TextBox>
+            </InlineUIContainer>
+        </TextBlock>
+
+        <!-- game version -->
+        <TextBlock
+            Foreground="#fff"
+            Margin="0,25,0,0"
+            FontSize="15">
+            Game version:
+            <InlineUIContainer
+                BaselineAlignment="Center">
+                <TextBox Name="gameVersionInput"
+                    Width="100"
+                    Foreground="#fff"
+                    Background="#333"
+                    BorderThickness="0">
+                    
+                </TextBox>
+            </InlineUIContainer>
+        </TextBlock>
+
+        <!-- game loader -->
+        <TextBlock
+            Foreground="#fff"
+            Margin="0,50,0,0"
+            FontSize="15">
+            Game loader:
+            <InlineUIContainer
+                BaselineAlignment="Center">
+                <TextBox Name="gameLoaderInput"
+                    Width="100"
+                    Foreground="#fff"
+                    Background="#333"
+                    BorderThickness="0"
+                    Margin="5.5,0,0,0">
+                    
+                </TextBox>
+            </InlineUIContainer>
+        </TextBlock>
+
+        <!-- imported mods list -->
+        <Grid 
+            Height="170"
+            VerticalAlignment="Bottom">
+            <ScrollViewer
+                VerticalScrollBarVisibility="Auto">
+                <StackPanel Name="importedModsList">
+                    
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <!-- import mods button -->
+        <Button 
+            Name="Import"
+            HorizontalAlignment="Left" 
+            Margin="206,0,0,0" 
+            VerticalAlignment="Top" 
+            Height="25" 
+            Width="90"
+            Background="DodgerBlue"
+            Foreground="#fff"
+            FontSize="13"
+            FontWeight="Bold"
+            BorderThickness="0"
+            Click="Import_Click">
+            Import mods
+        </Button>
+
+        <!-- Accept changes button-->
+        <Button
+            Name="Accept"
+            Click="Accept_Click"
+            Width="90"
+            Height="25"
+            Background="DodgerBlue"
+            Foreground="#fff"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Left"
+            FontSize="13"
+            FontWeight="Bold"
+            BorderThickness="0" 
+            Margin="301,0,0,0">
+            Accept
+        </Button>
+    </Grid>
+</Window>

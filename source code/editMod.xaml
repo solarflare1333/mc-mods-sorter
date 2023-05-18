@@ -1,0 +1,34 @@
+﻿<Window x:Class="mc_mods_sorter.editMod"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:mc_mods_sorter"
+        mc:Ignorable="d"
+        Background="#222"
+        MinHeight="300"
+        MinWidth="300"
+        Title="mc mod loader" Height="300" Width="300">
+    <Grid>
+        <Button 
+            Name="ClearAllBt"
+            Height="20" 
+            Width="60"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            Margin="10"
+            Foreground="#fff"
+            Background="DodgerBlue"
+            BorderThickness="0"
+            FontWeight="Bold"
+            Click="ClearAllBt_Click">
+            Clear all
+        </Button>
+        <ScrollViewer
+            VerticalScrollBarVisibility="Auto" Margin="0, 40, 0, 0">
+            <StackPanel Name="PrimaryContainer">
+                
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
